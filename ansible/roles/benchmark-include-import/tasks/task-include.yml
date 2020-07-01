@@ -1,0 +1,5 @@
+---
+- include_tasks: hello.yml
+- include_tasks: hello.yml
+- include_tasks: hello.yml
+- include_tasks: hello.yml

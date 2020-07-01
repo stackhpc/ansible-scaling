@@ -1,0 +1,5 @@
+---
+- import_tasks: hello.yml
+- import_tasks: hello.yml
+- import_tasks: hello.yml
+- import_tasks: hello.yml

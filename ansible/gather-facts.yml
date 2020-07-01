@@ -1,0 +1,11 @@
+---
+# Delegate gathering to localhost. Populates facts without requiring remote
+# hosts.
+- name: Gather facts for all hosts
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Gather facts
+      setup:
+      delegate_to: localhost
+  tags: always
