@@ -9,7 +9,7 @@ each benchmark 3 times.
 
 The [hello.yml](ansible/roles/benchmark-include-import/tasks/hello.yml) tasks
 file executes the debug module once.  The
-[hello-4x.yml]((ansible/roles/benchmark-include-import/tasks/hello-4x.yml)
+[hello-4x.yml](ansible/roles/benchmark-include-import/tasks/hello-4x.yml)
 tasks file executes the debug module four times.
 
 ## Task include and import
