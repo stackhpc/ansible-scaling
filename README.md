@@ -14,6 +14,15 @@ various sizes affect Ansible controller performance.
 
 Documentation and results of benchmarks are provided [here](doc/index.md).
 
+## Tools
+
+### profile\_tasks parser
+
+[profile parser](tools/profile-parser.py) parses the output of the
+[profile_tasks](https://docs.ansible.com/ansible/latest/plugins/callback/profile_tasks.html)
+callback plugin and generates CSV data. It's not pretty, but it is effective if
+this is the only data you have access to.
+
 ## License
 
 Apache 2.0
