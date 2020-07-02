@@ -1,0 +1,3 @@
+{% for i in query('sequence', 'start=0 count=' ~ benchmark_template_jinja_include_count) %}
+{% include 'template.j2' %}
+{% endfor %}

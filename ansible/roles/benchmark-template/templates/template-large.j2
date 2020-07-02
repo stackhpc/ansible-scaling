@@ -1,0 +1,5 @@
+{% for _ in query('sequence', 'start=0 count=' ~ benchmark_template_large_count) %}
+
+{{ benchmark_template_content }}
+
+{% endfor %}

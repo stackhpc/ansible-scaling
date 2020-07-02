@@ -1,0 +1,46 @@
+---
+- import_playbook: gather-facts.yml
+  when: gather_facts | default(false) | bool
+
+- import_playbook: group-hosts.yml
+  when: group_hosts | default(false) | bool
+
+- name: Benchmark template single
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-template-single
+  tasks:
+    - import_role:
+        role: benchmark-template
+        tasks_from: single.yml
+
+- name: Benchmark template loop
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-template-loop
+  tasks:
+    - import_role:
+        role: benchmark-template
+        tasks_from: loop.yml
+
+- name: Benchmark template jinja include
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-template-jinja-include
+  tasks:
+    - import_role:
+        role: benchmark-template
+        tasks_from: jinja-include.yml
+
+- name: Benchmark template large
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-template-large
+  tasks:
+    - import_role:
+        role: benchmark-template
+        tasks_from: large.yml

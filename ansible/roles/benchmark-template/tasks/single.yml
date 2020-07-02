@@ -1,0 +1,6 @@
+---
+- name: Template
+  template:
+    src: template.j2
+    dest: "{{ inventory_hostname }}.single"
+  delegate_to: localhost

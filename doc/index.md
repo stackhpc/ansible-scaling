@@ -7,3 +7,4 @@ Ansible project. This should help to model the effect of variables on
 performance.
 
 * [include and import](include-and-import.md)
+* [template](template.md)

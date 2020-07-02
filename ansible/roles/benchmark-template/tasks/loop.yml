@@ -1,0 +1,7 @@
+---
+- name: Template
+  template:
+    src: template.j2
+    dest: "{{ inventory_hostname }}.loop-{{ item }}"
+  delegate_to: localhost
+  loop: "{{ query('sequence', 'start=0 count=' ~ benchmark_template_loop_count) }}"
