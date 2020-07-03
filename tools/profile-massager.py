@@ -55,6 +55,7 @@ def main():
         df = df.query('ok > 0 or changed > 0')
     elif parsed_args.ok_or_changed == 'no':
         df = df.query('ok == 0 and changed == 0')
+    df = df.query('Duration >= 0')
     df = pd.pivot_table(df, index=parsed_args.index, values=["Duration"],
                         aggfunc=np.sum)
     df = df.sort_values('Duration', ascending=False)
@@ -63,6 +64,8 @@ def main():
     else:
         func = getattr(df, 'to_' + parsed_args.format)
         print(func())
+    print()
+    print("Total", df['Duration'].sum())
 
 
 if __name__ == "__main__":
