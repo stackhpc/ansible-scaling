@@ -1,0 +1,6 @@
+---
+- name: Template
+  template:
+    src: template-lookup-or-jinja-include.j2
+    dest: "{{ inventory_hostname }}.lookup-or-jinja-include"
+  delegate_to: localhost

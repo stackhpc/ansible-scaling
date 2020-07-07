@@ -1,0 +1,7 @@
+{% for i in query('sequence', 'start=0 count=' ~ benchmark_template_lookup_count) %}
+{% if i | int is even %}
+{{ lookup('template', 'template.j2') }}
+{% else %}
+{% include 'template.j2' %}
+{% endif %}
+{% endfor %}

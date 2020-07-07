@@ -2,7 +2,7 @@
 
 set -e
 
-tags="benchmark-template-single benchmark-template-loop benchmark-template-jinja-include benchmark-template-large"
+tags="benchmark-template-single benchmark-template-loop benchmark-template-jinja-include benchmark-template-large benchmark-template-lookup"
 inventory=ansible/inventory/hosts-100
 playbook=ansible/benchmark-template.yml
 gathers="yes"

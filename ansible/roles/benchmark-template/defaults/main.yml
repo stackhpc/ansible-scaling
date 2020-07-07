@@ -9,3 +9,4 @@ benchmark_template_content: >
 benchmark_template_jinja_include_count: 20
 benchmark_template_loop_count: 20
 benchmark_template_large_count: 1000
+benchmark_template_lookup_count: 20

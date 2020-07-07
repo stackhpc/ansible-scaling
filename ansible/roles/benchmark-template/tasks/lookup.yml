@@ -1,0 +1,6 @@
+---
+- name: Template
+  template:
+    src: template-lookup.j2
+    dest: "{{ inventory_hostname }}.lookup"
+  delegate_to: localhost

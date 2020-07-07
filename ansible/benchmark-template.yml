@@ -44,3 +44,23 @@
     - import_role:
         role: benchmark-template
         tasks_from: large.yml
+
+- name: Benchmark template lookup
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-template-lookup
+  tasks:
+    - import_role:
+        role: benchmark-template
+        tasks_from: lookup.yml
+
+- name: Benchmark template lookup or jinja include
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-template-lookup-or-jinja-include
+  tasks:
+    - import_role:
+        role: benchmark-template
+        tasks_from: lookup-or-jinja-include.yml
