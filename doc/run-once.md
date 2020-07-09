@@ -1,10 +1,10 @@
 # Run once
 
-Playbook: [benchmark-run-once.yml](ansible/benchmark-run-once.yml)
+Playbook: [benchmark-run-once.yml](../ansible/benchmark-run-once.yml)
 
-Inventory: [hosts-100](ansible/inventory/hosts-100)
+Inventory: [hosts-100](../ansible/inventory/hosts-100)
 
-The script [benchmark-run-once.sh](benchmark-run-once.sh) executes each
+The script [benchmark-run-once.sh](../benchmark-run-once.sh) executes each
 benchmark 3 times.
 
 ## Run once yes

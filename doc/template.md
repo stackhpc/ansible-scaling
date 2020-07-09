@@ -1,10 +1,10 @@
 # Template
 
-Playbook: [benchmark-template.yml](ansible/benchmark-template.yml)
+Playbook: [benchmark-template.yml](../ansible/benchmark-template.yml)
 
-Inventory: [hosts-100](ansible/inventory/hosts-100)
+Inventory: [hosts-100](../ansible/inventory/hosts-100)
 
-The script [benchmark-template.sh](benchmark-template.sh) executes each
+The script [benchmark-template.sh](../benchmark-template.sh) executes each
 benchmark 3 times.
 
 ## Template single

@@ -1,15 +1,15 @@
 # Include and import
 
-Playbook: [benchmark-include-import.yml](ansible/benchmark-include-import.yml)
+Playbook: [benchmark-include-import.yml](../ansible/benchmark-include-import.yml)
 
-Inventory: [hosts-100](ansible/inventory/hosts-100)
+Inventory: [hosts-100](../ansible/inventory/hosts-100)
 
-The script [benchmark-include-import.sh](benchmark-include-import.sh) executes
+The script [benchmark-include-import.sh](../benchmark-include-import.sh) executes
 each benchmark 3 times.
 
-The [hello.yml](ansible/roles/benchmark-include-import/tasks/hello.yml) tasks
+The [hello.yml](../ansible/roles/benchmark-include-import/tasks/hello.yml) tasks
 file executes the debug module once.  The
-[hello-4x.yml](ansible/roles/benchmark-include-import/tasks/hello-4x.yml)
+[hello-4x.yml](../ansible/roles/benchmark-include-import/tasks/hello-4x.yml)
 tasks file executes the debug module four times.
 
 ## Task include and import

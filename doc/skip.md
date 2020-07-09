@@ -3,11 +3,11 @@
 What we are trying to do with these benchmarks is to determine the cost of
 various ways of executing tasks conditionally on different hosts.
 
-Playbook: [benchmark-skip.yml](ansible/benchmark-skip.yml)
+Playbook: [benchmark-skip.yml](../ansible/benchmark-skip.yml)
 
-Inventory: [hosts-100](ansible/inventory/hosts-100)
+Inventory: [hosts-100](../ansible/inventory/hosts-100)
 
-The script [benchmark-run-once.sh](benchmark-skip.sh) executes each benchmark 3
+The script [benchmark-run-once.sh](../benchmark-skip.sh) executes each benchmark 3
 times.
 
 Individual task durations have been included since they are short comparison
