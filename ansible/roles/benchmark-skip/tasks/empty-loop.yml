@@ -1,0 +1,5 @@
+---
+- name: Debug
+  debug:
+    msg: Hello, world
+  with_items: []

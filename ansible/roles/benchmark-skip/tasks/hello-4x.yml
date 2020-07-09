@@ -1,0 +1,16 @@
+---
+- name: Debug 1
+  debug:
+    msg: Hello, world 1
+
+- name: Debug 2
+  debug:
+    msg: Hello, world 2
+
+- name: Debug 3
+  debug:
+    msg: Hello, world 3
+
+- name: Debug 4
+  debug:
+    msg: Hello, world 4

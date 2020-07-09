@@ -1,0 +1,76 @@
+---
+- import_playbook: gather-facts.yml
+  when: gather_facts | default(false) | bool
+
+- import_playbook: group-hosts.yml
+  when: group_hosts | default(false) | bool
+
+- name: Benchmark not skipped
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-not-skipped
+  tasks:
+    - import_role:
+        role: benchmark-skip
+        tasks_from: hello.yml
+
+- name: Benchmark skipped
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-skipped
+  tasks:
+    - import_role:
+        role: benchmark-skip
+        tasks_from: skipped.yml
+
+- name: Benchmark not skipped 4x
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-not-skipped-4x
+  tasks:
+    - import_role:
+        role: benchmark-skip
+        tasks_from: hello-4x.yml
+
+- name: Benchmark skipped 4x
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-skipped-4x
+  tasks:
+    - import_role:
+        role: benchmark-skip
+        tasks_from: skipped-4x.yml
+
+- name: Benchmark not skipped loop
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-not-skipped-loop
+  tasks:
+    - import_role:
+        role: benchmark-skip
+        tasks_from: hello-loop.yml
+
+- name: Benchmark skipped loop
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-skipped-loop
+  tasks:
+    - import_role:
+        role: benchmark-skip
+        tasks_from: skipped-loop.yml
+
+- name: Benchmark empty loop
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-empty-loop
+  tasks:
+    - import_role:
+        role: benchmark-skip
+        tasks_from: empty-loop.yml

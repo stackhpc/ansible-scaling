@@ -9,3 +9,4 @@ performance.
 * [include and import](include-and-import.md)
 * [template](template.md)
 * [run once](run-once.md)
+* [skip](skip.md)
