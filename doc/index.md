@@ -10,3 +10,4 @@ performance.
 * [template](template.md)
 * [run once](run-once.md)
 * [skip](skip.md)
+* [notify](notify.md)

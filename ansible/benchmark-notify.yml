@@ -1,0 +1,74 @@
+---
+- import_playbook: gather-facts.yml
+  when: gather_facts | default(false) | bool
+
+- import_playbook: group-hosts.yml
+  when: group_hosts | default(false) | bool
+
+- name: Benchmark notify no include no change
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-notify-no-include-no-change
+  tasks:
+    - import_role:
+        role: benchmark-notify
+        tasks_from: no-include.yml
+      vars:
+        num_handlers: 0
+
+- name: Benchmark notify include no change
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-notify-include-no-change
+  tasks:
+    - import_role:
+        role: benchmark-notify
+        tasks_from: include.yml
+      vars:
+        num_handlers: 0
+
+- name: Benchmark notify no include one changed
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-notify-no-include-one-changed
+  tasks:
+    - import_role:
+        role: benchmark-notify
+        tasks_from: no-include.yml
+      vars:
+        num_handlers: 1
+
+- name: Benchmark notify include one changed
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-notify-include-one-changed
+  tasks:
+    - import_role:
+        role: benchmark-notify
+        tasks_from: include.yml
+      vars:
+        num_handlers: 1
+
+- name: Benchmark notify no include all changed
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-notify-no-include-all-changed
+  tasks:
+    - import_role:
+        role: benchmark-notify
+        tasks_from: no-include.yml
+
+- name: Benchmark notify include all changed
+  gather_facts: false
+  hosts: all
+  tags:
+    - benchmark-notify-include-all-changed
+  tasks:
+    - import_role:
+        role: benchmark-notify
+        tasks_from: include.yml

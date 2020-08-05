@@ -1,0 +1,7 @@
+---
+- name: notify a handler
+  command: sleep {{ sleep_duration }}
+  connection: local
+  changed_when: item | int < num_handlers | int
+  notify:
+    - handler {{ item }}
