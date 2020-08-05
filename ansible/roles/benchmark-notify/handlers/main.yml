@@ -1,0 +1,40 @@
+---
+- name: handler 0
+  command: sleep {{ sleep_duration }}
+  connection: local
+
+- name: handler 1
+  command: sleep {{ sleep_duration }}
+  connection: local
+
+- name: handler 2
+  command: sleep {{ sleep_duration }}
+  connection: local
+
+- name: handler 3
+  command: sleep {{ sleep_duration }}
+  connection: local
+
+- name: handler 4
+  command: sleep {{ sleep_duration }}
+  connection: local
+
+- name: handler 5
+  command: sleep {{ sleep_duration }}
+  connection: local
+
+- name: handler 6
+  command: sleep {{ sleep_duration }}
+  connection: local
+
+- name: handler 7
+  command: sleep {{ sleep_duration }}
+  connection: local
+
+- name: handler 8
+  command: sleep {{ sleep_duration }}
+  connection: local
+
+- name: handler 9
+  command: sleep {{ sleep_duration }}
+  connection: local

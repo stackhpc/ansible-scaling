@@ -1,0 +1,7 @@
+---
+# Number of 'services' to manage.
+num_services: 5
+# Number of handlers to notify.
+num_handlers: "{{ num_services }}"
+# Duration of each command.
+sleep_duration: 1

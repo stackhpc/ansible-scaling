@@ -1,0 +1,8 @@
+---
+- name: notify handlers
+  command: sleep {{ sleep_duration }}
+  connection: local
+  changed_when: item | int < num_handlers | int
+  notify:
+    - handler {{ item }}
+  loop: "{{ query('sequence', 'start=0 count=' ~ num_services) }}"

@@ -1,0 +1,4 @@
+---
+- name: include
+  include_tasks: notify.yml
+  loop: "{{ query('sequence', 'start=0 count=' ~ num_services) }}"
