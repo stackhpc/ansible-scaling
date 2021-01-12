@@ -23,7 +23,7 @@ Documentation and results of benchmarks are provided [here](doc/index.md).
 callback plugin and generates CSV data. It's not pretty, but it is effective if
 this is the only data you have access to.
 
-## profile\_tasks massager
+### profile\_tasks massager
 
 [profile massager](tools/profile-massager.py) massages the CSV data generated
 by the profile parser, into various formats. It aggregates based on task
