@@ -1,0 +1,34 @@
+---
+- name: Benchmark facts (baseline)
+  hosts: all
+  gather_facts: no
+  tags:
+    - benchmark-facts-baseline
+  tasks: 
+    - import_role:
+        name: ../roles/benchmark-facts
+        tasks_from: baseline.yml
+
+- import_playbook: ../gather-facts.yml
+
+- name: Benchmark facts (with facts)
+  hosts: all
+  gather_facts: no
+  tags:
+    - benchmark-facts-with-facts
+  tasks: 
+    - import_role:
+        name: ../roles/benchmark-facts
+        tasks_from: baseline.yml
+
+- import_playbook: ../group-hosts.yml
+
+- name: Benchmark facts (with facts and dynamic groups)
+  hosts: all
+  gather_facts: no
+  tags:
+    - benchmark-facts-with-facts-and-groups
+  tasks: 
+    - import_role:
+        name: ../roles/benchmark-facts
+        tasks_from: baseline.yml

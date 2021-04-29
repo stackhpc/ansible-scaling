@@ -11,3 +11,4 @@ performance.
 * [run once](run-once.md)
 * [skip](skip.md)
 * [notify](notify.md)
+* [facts](facts.md)
