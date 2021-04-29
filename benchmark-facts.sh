@@ -10,7 +10,7 @@ groups="no"
 
 for gather in $gathers; do
     for group in $groups; do
-        output_dir=gather-$gather-group-$group
+        output_dir=results
         mkdir -p $output_dir
         for tag in $tags ; do
             for i in $(seq 1 3); do

@@ -5,9 +5,9 @@
   tags:
     - benchmark-facts-baseline
   tasks: 
-    - import_role:
-        name: ../roles/benchmark-facts
-        tasks_from: baseline.yml
+    - name: Hello, world
+      debug:
+        msg: Hello, world
 
 - import_playbook: ../gather-facts.yml
 
@@ -17,9 +17,9 @@
   tags:
     - benchmark-facts-with-facts
   tasks: 
-    - import_role:
-        name: ../roles/benchmark-facts
-        tasks_from: baseline.yml
+    - name: Hello, world
+      debug:
+        msg: Hello, world
 
 - import_playbook: ../group-hosts.yml
 
@@ -29,6 +29,6 @@
   tags:
     - benchmark-facts-with-facts-and-groups
   tasks: 
-    - import_role:
-        name: ../roles/benchmark-facts
-        tasks_from: baseline.yml
+    - name: Hello, world
+      debug:
+        msg: Hello, world
