@@ -1,4 +1,5 @@
 ---
+#- import_playbook: ../gather-facts.yml
 - name: Benchmark facts (baseline)
   hosts: all
   gather_facts: no
@@ -9,26 +10,28 @@
       debug:
         msg: Hello, world
 
-- import_playbook: ../gather-facts.yml
-
-- name: Benchmark facts (with facts)
-  hosts: all
-  gather_facts: no
-  tags:
-    - benchmark-facts-with-facts
-  tasks: 
-    - name: Hello, world
-      debug:
-        msg: Hello, world
-
-- import_playbook: ../group-hosts.yml
-
-- name: Benchmark facts (with facts and dynamic groups)
-  hosts: all
-  gather_facts: no
-  tags:
-    - benchmark-facts-with-facts-and-groups
-  tasks: 
-    - name: Hello, world
-      debug:
-        msg: Hello, world
+#- fail:
+#
+#- import_playbook: ../gather-facts.yml
+#
+#- name: Benchmark facts (with facts)
+#  hosts: all
+#  gather_facts: no
+#  tags:
+#    - benchmark-facts-with-facts
+#  tasks: 
+#    - name: Hello, world
+#      debug:
+#        msg: Hello, world
+#
+#- import_playbook: ../group-hosts.yml
+#
+#- name: Benchmark facts (with facts and dynamic groups)
+#  hosts: all
+#  gather_facts: no
+#  tags:
+#    - benchmark-facts-with-facts-and-groups
+#  tasks: 
+#    - name: Hello, world
+#      debug:
+#        msg: Hello, world

@@ -1,0 +1,7 @@
+---
+- name: Benchmark role defaults
+  hosts: all
+  gather_facts: no
+  tasks: 
+    - import_role:
+        name: benchmark-role-defaults

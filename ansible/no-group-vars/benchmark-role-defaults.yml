@@ -1,0 +1,9 @@
+---
+- name: Benchmark facts (baseline)
+  hosts: all
+  gather_facts: no
+  tags:
+    - benchmark-facts-role-defaults
+  tasks: 
+    - import_role:
+        name: ../roles/benchmark-role-defaults

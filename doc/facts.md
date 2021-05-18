@@ -4,6 +4,8 @@ TODO:
 
 * baseline performance without facts, group_vars, or groups
 
+Why can't I reproduce this?
+
 100 hosts, with & without facts, no group_vars:
 
 Thursday 29 April 2021  12:29:49 +0100 (0:00:35.534)       0:02:20.549 ********
@@ -27,3 +29,17 @@ Gather facts -------------------------------------------------------------------
 real    2m57.828s
 user    10m20.346s
 sys     3m27.496s
+
+## Test cases
+
+* facts - number & size (use cache)
+* group_vars/all - number & size
+* role defaults - number & size
+* extra vars - number & size
+* inventory host vars - number & size
+* groups
+* set_fact
+
+Variables:
+* Number of hosts
+* Control host machine (baremetal, VM, resources)
